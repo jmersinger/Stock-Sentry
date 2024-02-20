@@ -92,7 +92,8 @@ body {
     cursor: pointer;
 }
 
-#user-icon {
+.user-icon {
+    background-image: url('images/user-icon.png');
     margin-top: 5px;
     margin-right: 5px;
     width: 40px;
