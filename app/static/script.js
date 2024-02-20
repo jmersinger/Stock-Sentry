@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener for mouseout on user icon
-    navbar.addEventListener("mouseenter", function () {
+    userIcon.addEventListener("mouseenter", function () {
         dropdownHideTimeout = setTimeout(function () {
             hideUserDropdown();
         }, 200);
