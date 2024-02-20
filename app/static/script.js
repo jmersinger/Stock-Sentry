@@ -1,8 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var navMenu = document.getElementById("nav-menu");
+    var navMenu = document.getElementById("nav-menu");  
     var squareBox = document.getElementById("trigger-box");
-    var userIcon = document.getElementById("user-icon");
+    var userIcon = document.getElementById("userIcon");
     var userDropdown = document.getElementById("user-dropdown");
+    var imagePath;
+    var scriptTag = document.querySelector('script[src$="/static/script.js"]');
+    var htmlFileName = scriptTag.dataset.htmlFile || 'default'; 
+
+
+    if (htmlFileName == "homepage") {
+        imagePath = "./static/images/user-icon.png";
+    } else {
+        imagePath = "/app/static/images/user-icon.png";
+    } 
+    userIcon.src = imagePath;
+
+
+
 
     // Event listener for white box click
     squareBox.addEventListener("click", function (event) {
@@ -24,19 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener for mouseover on user icon
-    userIcon.addEventListener("click", function () {
+    userIcon.addEventListener("click", function (event) {
         showUserDropdown();
-    });
+    }); 
 
     // Event listener for mouseout on user icon
     userIcon.addEventListener("mouseleave", function () {
         dropdownHideTimeout = setTimeout(function () {
             hideUserDropdown();
         }, 300);
-    });
+    }); 
 
     // Event listener for mouseover on user dropdown
-    userDropdown.addEventListener("mouseenter", function () {
+        userDropdown.addEventListener("mouseenter", function () {
         clearTimeout(dropdownHideTimeout);
         showUserDropdown();
     });
@@ -45,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     userDropdown.addEventListener("mouseleave", function () {
         hideUserDropdown();
     });
-});
+
+
+});    
+    
 
 function toggleNav() {
     var navMenu = document.getElementById("nav-menu");
@@ -69,3 +86,6 @@ function hideUserDropdown() {
     var userDropdown = document.getElementById("user-dropdown");
     userDropdown.style.display = "none";
 }
+
+
+
