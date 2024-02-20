@@ -1,9 +1,18 @@
-your_project_directory/
+Stock-Sentry/
 |-- .github/
 |   |-- workflows/
 |   |   |-- azure-static-web-apps-delightful-sea-017c4a90f.yml
 |-- app/
+|   |-- __pycache/
+|   |-- static/
+|   |   |-- images/
+|   |   |   |-- user-icon.png
+|   |   |-- script.js
+|   |   |-- styles.css
+|   |-- templates/
+|   |   |-- index.html
 |   |-- __init__.py
+|   |-- models.py
 |   |-- routes.py
 |-- react-app/
 |   |-- public/
@@ -12,8 +21,7 @@ your_project_directory/
 |   |   |-- App.js
 |   |   |-- index.js
 |   |-- package.json
-|-- templates/
-|   |-- index.html  (Flask template, not React)
 |-- venv/  (virtual environment directory)
-|-- app.py  (or run.py, your main Flask file)
+|-- app.py
+|-- config.py
 |-- requirements.txt
