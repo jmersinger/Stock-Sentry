@@ -1,0 +1,19 @@
+your_project_directory/
+|-- .github/
+|   |-- workflows/
+|   |   |-- azure-static-web-apps-delightful-sea-017c4a90f.yml
+|-- app/
+|   |-- __init__.py
+|   |-- routes.py
+|-- react-app/
+|   |-- public/
+|   |   |-- index.html
+|   |-- src/
+|   |   |-- App.js
+|   |   |-- index.js
+|   |-- package.json
+|-- templates/
+|   |-- index.html  (Flask template, not React)
+|-- venv/  (virtual environment directory)
+|-- app.py  (or run.py, your main Flask file)
+|-- requirements.txt
