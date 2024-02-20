@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener for mouseout on user icon
-    userIcon.addEventListener("mouseenter", function () {
+    userIcon.addEventListener("mouseleave", function () {
         dropdownHideTimeout = setTimeout(function () {
             hideUserDropdown();
-        }, 200);
+        }, 300);
     });
 
     // Event listener for mouseover on user dropdown
