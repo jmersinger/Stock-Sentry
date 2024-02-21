@@ -4,19 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var userIcon = document.getElementById("userIcon");
     var userDropdown = document.getElementById("user-dropdown");
     var imagePath;
-    var scriptTag = document.querySelector('script[src$="/static/script.js"]');
-    var htmlFileName = scriptTag.dataset.htmlFile || 'default'; 
-
-
-    if (htmlFileName == "homepage") {
-        imagePath = "./static/images/user-icon.png";
-    } else {
-        imagePath = "/app/static/images/user-icon.png";
-    } 
-    userIcon.src = imagePath;
-
-
-
 
     // Event listener for white box click
     squareBox.addEventListener("click", function (event) {
