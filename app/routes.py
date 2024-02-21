@@ -2,5 +2,21 @@ from flask import render_template
 from app import app
 
 @app.route('/')
-def index():
+def homepage():
     return render_template('homepage.html')
+
+@app.route('/stocks/getstarted')
+def get_started():
+    return render_template('getstarted.html')
+
+@app.route('/stocks/choosestocks')
+def choose_stocks():
+    return render_template('choosestocks.html')
+
+@app.route('/stocks/mystocks')
+def my_stocks():
+    return render_template('mystocks.html')
+
+@app.route('/about/about')
+def about():
+    return render_template('about.html')
