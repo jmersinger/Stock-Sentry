@@ -20,3 +20,16 @@ def my_stocks():
 @app.route('/about/about')
 def about():
     return render_template('about.html')
+
+@function.route("/")
+def index():
+    return app.send.static.file("index.html")
+
+@function.route("/api", methods=["POST"])
+def api():
+    data = request.json
+    print = ("Recieved Finnhub Webhook")
+    return jsonify({"message": "Webhook recieved successfully"})
+
+if __name__ == "__main__":
+    function.run(port=5000)

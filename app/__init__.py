@@ -1,5 +1,7 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+from app import app
 
-app = Flask(__name__, static_folder='static')
+function = Flask(__name__)
+
 
 from app import routes
